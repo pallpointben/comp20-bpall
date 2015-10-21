@@ -1,1 +1,6 @@
-/* Your CSS here... */
+.messages {
+	background-color: #7CFC00;
+	width: 25%;
+	border-radius: 7px;
+	padding-left: 10px;
+}
