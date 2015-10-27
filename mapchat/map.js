@@ -58,7 +58,9 @@ function renderMap() {
     for (i = 0; i < data.length; i++) {
 
         var them = new google.maps.LatLng(data[i].lat, data[i].lng);
-        text[i] = "User: " + data[i].login + "<br/> Message: " + data[i].message + "<br/> Miles away: " + haversine(me, them).toFixed(2);
+        text[i] = "<span class='label'>User:</span> " + data[i].login + 
+        "<br/> <span class='label'>Message:</span> " + data[i].message + 
+        "<br/> <span class='label'>Miles away:</span> " + haversine(me, them).toFixed(2);
         if (data[i].login != 'KelleyRumfelt'){
           markers[i] = new google.maps.Marker({
             position: them,
