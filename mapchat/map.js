@@ -59,16 +59,26 @@ function renderMap() {
 
         var them = new google.maps.LatLng(data[i].lat, data[i].lng);
         text[i] = "User: " + data[i].login + "<br/> Message: " + data[i].message + "<br/> Miles away: " + haversine(me, them).toFixed(2);
-        markers[i] = new google.maps.Marker({
-          position: them,
-          content: text[i]
-        });
+        if (data[i].login != 'KelleyRumfelt'){
+          markers[i] = new google.maps.Marker({
+            position: them,
+            content: text[i]
+          });
+        }
+        else {
+          markers[i] = new google.maps.Marker({
+            position: them,
+            content: text[i],
+            icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+          });
+        }
         markers[i].setMap(map);
         google.maps.event.addListener(markers[i], 'click', function() {
           infowindow.setContent(this.content);
           infowindow.open(this.getMap(), this);
         });
     }
+
 }
     
   // Open info window on click of marker
