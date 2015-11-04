@@ -6,7 +6,26 @@
 	<title>Captain's Log</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script>
-	  var now = Date.now();
+		$(document).ready(function(){
+			reload();
+			if (localStorage['messages'] == undefined){
+				localStorage.setItem('messages', "");
+			}
+			
+			$('#msg').keydown(function(event){
+				if (event.keyCode == 13){
+					localStorage['messages'] = (
+						new Date().toString() + " - " + $('#msg').val() + "<br/><br/>" + localStorage['messages']);
+				}
+				reload();
+			});	
+			function reload() {	
+				$('#log').html(localStorage['messages']);
+			}
+		});
+		
+			
+		
 	</script>
 </head>
 
