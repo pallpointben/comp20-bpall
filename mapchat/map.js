@@ -33,7 +33,7 @@ function getMyLocation() {
 }
 
 function postmystuff() {
-  var url = "https://ancient-shore-1307.herokuapp.com//sendLocation";
+  var url = "https://ancient-shore-1307.herokuapp.com/sendLocation";
   var params = "login=KelleyRumfelt&lat=" + myLat + "&lng=" + myLng + "&message=Shum%20shum%20shlippady%20dop!";
   http.open("POST", url, true);
 
