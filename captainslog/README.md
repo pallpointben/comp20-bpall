@@ -1,5 +1,3 @@
-# The whole lab works correctly.
+# README
 
-# I spoke with Matthew Carrington Fair about this project.
-
-# This project took me approximately one hour.
+The purpose of this project is to create a chat page that displays content asynchronously.
