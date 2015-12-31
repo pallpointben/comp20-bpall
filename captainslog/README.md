@@ -1,3 +1,3 @@
 # README
 
-The purpose of this project is to create a chat page that displays content asynchronously.
+For this project, I implemented a simple page that displays content asynchronously.
