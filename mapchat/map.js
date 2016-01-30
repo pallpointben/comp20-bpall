@@ -34,7 +34,7 @@ function getMyLocation() {
 
 function postmystuff() {
   var url = "https://ancient-shore-1307.herokuapp.com/sendLocation";
-  var params = "login=KelleyRumfelt&lat=" + myLat + "&lng=" + myLng + "&message=Shum%20shum%20shlippady%20dop!";
+  var params = "login=KelleyRumfelt&lat=" + myLat + "&lng=" + myLng + "&message=I%20am%20here!";
   http.open("POST", url, true);
 
   //Send the proper header information along with the request
